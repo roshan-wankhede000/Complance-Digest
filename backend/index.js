@@ -1,28 +1,33 @@
-let dotenv = require("dotenv") 
-let express = require("express")
-let app = express()
-let cors = require("cors")
-let router = require("./router/router")
-let path = require("path")
+require("dotenv").config(); // load env first
 
-dotenv.config()
-let port = process.env.PORT || 5000
+let express = require("express");
+let app = express();
+let cors = require("cors");
+let router = require("./router/router");
+let path = require("path");
 
-let _dirname = path.resolve()
+let port = process.env.PORT || 5000;
+
+// absolute path to project root
+let rootDir = path.resolve();
 
 app.use(cors({
   origin: "http://localhost:5173",
   credentials: true
-}))
+}));
 
-app.use(express.urlencoded({ extended: true }))
-app.use(express.json())
-app.use("/", router)
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
-app.use(express.static(path.join(_dirname, "/frontend/dist")))
+// backend routes
+app.use("/", router);
 
-app.get(/.*/, (req, res) => {
-  res.sendFile(path.join(rootDir, "frontend", "dist", "index.html"))
-})
+// serve frontend build
+app.use(express.static(path.join(rootDir, "frontend", "dist")));
 
-app.listen(port, () => console.log(`server started on ${port}`))
+// ✅ fix: catch-all route
+app.get("/*", (req, res) => {
+  res.sendFile(path.join(rootDir, "frontend", "dist", "index.html"));
+});
+
+app.listen(port, () => console.log(`🚀 Server started on ${port}`));

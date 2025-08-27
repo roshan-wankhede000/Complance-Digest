@@ -1,6 +1,8 @@
 let mongoose = require("mongoose")
 
-mongoose.connect("mongodb://127.0.0.1:27017/insurance").then(()=>console.log("Database Connected ...")).catch((err) => console.error("❌ Database Connection Failed:", err));
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => console.log("✅ Database Connected ..."))
+  .catch((err) => console.error("❌ Database Connection Failed:", err));
 
 let schema = mongoose.Schema({
     compony:{
