@@ -7,7 +7,7 @@ function Insurance() {
 
   async function getAllInsurance() {
     try {
-      let response = await axios.get("http://localhost:8000/getInsurance")
+      let response = await axios.get("https://complance-digest.onrender.com/getInsurance")
       setEnsurance(response.data.data) 
     } catch (err) {
       console.error("Error fetching products:", err)

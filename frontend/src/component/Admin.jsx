@@ -18,7 +18,7 @@ function Admin() {
   };
     
 
-    axios.post("http://localhost:8000/addInsurance", data)
+    axios.post("https://complance-digest.onrender.com/addInsurance", data)
     .then(()=>{
       console.log("success, dictionary sent")
       navigate("/")
