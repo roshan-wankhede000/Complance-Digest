@@ -6,7 +6,7 @@ let {addInsurance,getInsurance,adminAboutData, aboutdata} = require("../controll
 
 let storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, './uploads')); // absolute path
+    cb(null, './uploads'); // absolute path
   },
   filename: function (req, file, cb) {
     cb(null, file.originalname);
