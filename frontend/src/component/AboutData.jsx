@@ -64,14 +64,14 @@ function AboutData() {
 
                                             <div class="d-flex gap-2 flex-wrap my-3">
                                                 {item.csvfile}
-                                                <a 
-  href={`${url}/uploads/${item.csvfile}`} 
-  className="btn btn-outline-primary" 
-  title="Download File" 
-  download={item.csvfile}
->
-  <i className="bi bi-filetype-xlsx"></i> Download
-</a>
+                                                <a
+                                                    href={`${url}/uploads/${item.csvfile}`}
+                                                    className="btn btn-outline-primary"
+                                                    title="Download File"
+                                                    download={item.csvfile}
+                                                >
+                                                    <i className="bi bi-filetype-xlsx"></i> Download
+                                                </a>
 
                                             </div>
                                             <hr />
