@@ -63,7 +63,6 @@ function AboutData() {
                                             </div>
 
                                             <div class="d-flex gap-2 flex-wrap my-3">
-                                                {item.csvfile}
                                                 <a
                                                     href={`${url}/uploads/${item.csvfile}`}
                                                     className="btn btn-outline-primary"
