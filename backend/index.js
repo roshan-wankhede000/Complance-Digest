@@ -16,7 +16,8 @@ mongoose.connect(process.env.MONGO_URL)
 let _dirname = path.resolve()
 
 app.use(cors({
-  origin: "http://localhost:5173",
+  // origin: "http://localhost:5173",
+  origin: "http://localhost:5173", 
   credentials: true
 }));
 
