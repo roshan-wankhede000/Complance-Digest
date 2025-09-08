@@ -1,5 +1,9 @@
+
+let path = require("path");
+let fs = require("fs");
 let inc = require("../model/insModel")
 let csv = require("../model/cvsModel")
+
 
 let addInsurance = async (req, res) => {
   try {
@@ -56,4 +60,23 @@ let aboutdata = async(req,res)=>{
 }
 
 
-module.exports = { addInsurance, getInsurance, adminAboutData, aboutdata }
+
+let downloadFile = async (req, res) => {
+  try {
+    const { filename } = req.params;
+    const filePath = path.join(__dirname, "../uploads", filename);
+
+    if (!fs.existsSync(filePath)) {
+      return res.status(404).json({ error: "File not found" });
+    }
+
+    res.download(filePath, filename); // Express built-in method
+  } catch (err) {
+    console.error("Download error:", err);
+    res.status(500).json({ error: "Failed to download file" });
+  }
+};
+
+
+
+module.exports = { addInsurance, getInsurance, adminAboutData, aboutdata, downloadFile }
