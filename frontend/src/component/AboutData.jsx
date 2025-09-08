@@ -9,7 +9,7 @@ function AboutData() {
     async function aboutData() {
 
         try {
-            let res = await axios.get(`${url}/aboutdata`)
+            let res = await axios.get(`${url}/get-aboutdata`)
             setData(res.data.data)
         } catch (err) {
             console.error("Error fetching about data:", err)

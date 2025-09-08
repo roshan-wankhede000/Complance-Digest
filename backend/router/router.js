@@ -18,6 +18,6 @@ let upload = multer({storage:storage})
 route.post("/addInsurance",addInsurance)
 route.get("/getInsurance",getInsurance)
 route.post("/adminAboutData",upload.single("csvfile"),adminAboutData)
-route.get("/aboutdata",aboutdata)
+route.get("/get-aboutdata",aboutdata)
 
 module.exports = route
