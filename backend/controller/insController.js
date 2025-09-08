@@ -35,7 +35,7 @@ let adminAboutData = async (req, res) => {
 
     await csv.create({
       desc,
-      csvfile: `/uploads/${req.file.filename}`  // URL that matches express.static
+      csvfile: req.file.filename  // URL that matches express.static
     });
 
     res.status(201).json({ message: "About Data saved successfully" });
@@ -49,9 +49,9 @@ let adminAboutData = async (req, res) => {
 let aboutdata = async(req,res)=>{
   try{
     let data = await csv.find()
-  return res.status(201).json({message:"Files Fetched Successfully", data:data})
+  return res.status(200).json({message:"Files Fetched Successfully", data:data})
   }catch(err){
-    return res.stat(500).json({message:err})
+    return res.status(500).json({message:err})
   }
 }
 
