@@ -27,18 +27,24 @@ let getInsurance = async (req, res) => {
 
 let adminAboutData = async (req, res) => {
   try {
-    let { desc } = req.body
-    let csvfile = req.file.originalname
+    let { desc } = req.body;
 
-    await csv.create(
-      { desc, csvfile }
-    )
-    res.status(201).json({ message: "Insurance data saved successfully" });
+    if (!req.file) {
+      return res.status(400).json({ error: "CSV file is required" });
+    }
+
+    await csv.create({
+      desc,
+      csvfile: `/uploads/${req.file.filename}`  // URL that matches express.static
+    });
+
+    res.status(201).json({ message: "About Data saved successfully" });
   } catch (err) {
-    console.error(err);
-    res.status(500).json({ error: "Failed to save insurance data" });
+    console.error("adminAboutData error:", err);
+    res.status(500).json({ error: "Failed to save about data" });
   }
-}
+};
+
 
 let aboutdata = async(req,res)=>{
   try{

@@ -1,16 +1,17 @@
 let express = require("express")
 let multer = require("multer")
+let path = require("path");
 let route = express.Router()
 let {addInsurance,getInsurance,adminAboutData, aboutdata} = require("../controller/insController")
 
 let storage = multer.diskStorage({
-    destination: function (req,file,cb){
-        cb(null,'./uploads')
-    },
-    filename: function (req,file,cb){
-        cb(null,file.originalname)
-    }
-})
+  destination: function (req, file, cb) {
+    cb(null, path.join(__dirname, "../uploads")); // absolute path
+  },
+  filename: function (req, file, cb) {
+    cb(null, Date.now() + "-" + file.originalname);
+  }
+});
 
 let upload = multer({storage:storage})
 
