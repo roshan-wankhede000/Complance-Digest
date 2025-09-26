@@ -43,7 +43,9 @@ function AboutData() {
         return (
             <>
                 <div className="container">
-                    <h4 className="text-primary mt-3">This section provides detailed information about insurance companies and coverage details. You can also view and download related data files for further analysis.</h4>
+                    <h4 className="text-primary mt-3">
+                        By curating and hosting structured data, BFSI OPEN DATA aims to enable better decision-making, support risk management, and inspire new tech-enabled solutions in the BFSI space. Whether you are analyzing trends, building models, or exploring insights, this platform is designed to be your trusted open data resource.
+                    </h4>
                     <div className="row my-5">
                         {
                             data.map((item) => (
@@ -63,22 +65,12 @@ function AboutData() {
                                             </div>
 
                                             <div class="d-flex gap-2 flex-wrap my-3">
-                                                {/* <a
-                                                    href={`${url}/uploads/${item.csvfile}`}
-                                                    className="btn btn-outline-primary"
-                                                    title="Download File"
-                                                    download={item.csvfile}
-                                                >
+                                                {/* <a href={`${url}/download/${item.csvfile}`} className="btn btn-outline-primary" title="Download File">
                                                     <i className="bi bi-filetype-xlsx"></i> Download
                                                 </a> */}
-
-                                                <a
-                                                    href={`${url}/download/${item.csvfile}`}
-                                                    className="btn btn-outline-primary"
-                                                    title="Download File"
-                                                >
+                                                <a href={`https://onedrive.live.com/view.aspx?resid=391EE544D02DDEC8!s41642eb8ea3d4ecbab7f204db8415e26&cid=391ee544d02ddec8&redeem=aHR0cHM6Ly8xZHJ2Lm1zL2YvYy8zOTFlZTU0NGQwMmRkZWM4L0VsOG52VFJXZUU5UGhPcGlpTHNibFNvQnZiY1o1R254aUJ0Y1d4Wi1ITnhacFE_ZT16aE1hazU&migratedtospo=true&app=Excel&CT=1758887202877&OR=ItemsView`} className="btn btn-outline-primary" title="Download File" target='_blank'>
                                                     <i className="bi bi-filetype-xlsx"></i> Download
-                                                </a>
+                                                </a> 
 
                                             </div>
                                             <hr />

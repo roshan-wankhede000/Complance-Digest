@@ -29,17 +29,34 @@ let getInsurance = async (req, res) => {
   }
 }
 
+// let adminAboutData = async (req, res) => {
+//   try {
+//     let { desc } = req.body;
+
+//     if (!req.file) {
+//       return res.status(400).json({ error: "CSV file is required" });
+//     }
+
+//     await csv.create({
+//       desc,
+//       csvfile: req.file.filename  // URL that matches express.static
+//     });
+
+//     res.status(201).json({ message: "About Data saved successfully" });
+//   } catch (err) {
+//     console.error("adminAboutData error:", err);
+//     res.status(500).json({ error: "Failed to save about data" });
+//   }
+// };
+
 let adminAboutData = async (req, res) => {
   try {
     let { desc } = req.body;
-
-    if (!req.file) {
-      return res.status(400).json({ error: "CSV file is required" });
-    }
+    let { csvfilelink } = req.body;
 
     await csv.create({
       desc,
-      csvfile: req.file.filename  // URL that matches express.static
+      csvfilelink
     });
 
     res.status(201).json({ message: "About Data saved successfully" });
@@ -61,22 +78,23 @@ let aboutdata = async(req,res)=>{
 
 
 
-let downloadFile = async (req, res) => {
-  try {
-    const { filename } = req.params;
-    const filePath = path.join(__dirname, "../uploads", filename);
+// let downloadFile = async (req, res) => {
+//   try {
+//     const { filename } = req.params;
+//     const filePath = path.join(__dirname, "../uploads", filename);
 
-    if (!fs.existsSync(filePath)) {
-      return res.status(404).json({ error: "File not found" });
-    }
+//     if (!fs.existsSync(filePath)) {
+//       return res.status(404).json({ error: "File not found" });
+//     }
 
-    res.download(filePath, filename); // Express built-in method
-  } catch (err) {
-    console.error("Download error:", err);
-    res.status(500).json({ error: "Failed to download file" });
-  }
-};
+//     res.download(filePath, filename); // Express built-in method
+//   } catch (err) {
+//     console.error("Download error:", err);
+//     res.status(500).json({ error: "Failed to download file" });
+//   }
+// };
 
 
 
-module.exports = { addInsurance, getInsurance, adminAboutData, aboutdata, downloadFile }
+// module.exports = { addInsurance, getInsurance, adminAboutData, aboutdata, downloadFile }
+module.exports = { addInsurance, getInsurance, adminAboutData, aboutdata }

@@ -4,7 +4,7 @@ let csvShema = mongoose.Schema({
     desc:{
         type:String
     },    
-    csvfile:{
+    csvfilelink:{
         type:String
     }
 })

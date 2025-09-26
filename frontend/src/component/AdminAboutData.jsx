@@ -48,9 +48,14 @@ function AdminAboutData() {
           <input className="form-control" name='desc' id="description" rows="3" placeholder="Enter file description..." />
         </div>
 
-        <div className="mb-3">
+        {/* <div className="mb-3">
           <label for="csvFile" className="form-label">Upload CSV File</label>
           <input className="form-control" type="file" name='csvfile' id="csvFile" accept=".csv" />
+        </div> */}
+
+        <div className="mb-3">
+          <label for="csvFileLink" className="form-label">Upload CSV File Link</label>
+          <input className="form-control" type="text" name='csvfilelink' id="csvFileLink" />
         </div>
 
         <button type="submit" className="btn btn-primary w-100">Submit</button>

@@ -2,7 +2,8 @@ let express = require("express");
 let multer = require("multer");
 let path = require("path");
 let route = express.Router();
-let { addInsurance, getInsurance, adminAboutData, aboutdata, downloadFile } = require("../controller/insController");
+// let { addInsurance, getInsurance, adminAboutData, aboutdata, downloadFile } = require("../controller/insController");
+let { addInsurance, getInsurance, adminAboutData, aboutdata } = require("../controller/insController");
 
 let storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -21,6 +22,6 @@ route.post("/adminAboutData", upload.single("csvfile"), adminAboutData);
 route.get("/get-aboutdata", aboutdata);
 
 // ✅ new download route
-route.get("/download/:filename", downloadFile);
+// route.get("/download/:filename", downloadFile);
 
 module.exports = route;
