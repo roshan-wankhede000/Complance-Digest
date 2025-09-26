@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Footer() {
   return (
@@ -17,18 +18,18 @@ function Footer() {
         <div class="col-md-4 mb-3">
           <h5>Quick Links</h5>
           <ul class="list-unstyled">
-            <li><a href="#" class="text-decoration-none text-light">Home</a></li>
-            <li><a href="#" class="text-decoration-none text-light">About</a></li>
-            <li><a href="#" class="text-decoration-none text-light">Services</a></li>
-            <li><a href="#" class="text-decoration-none text-light">Contact</a></li>
+            <li><Link to="/" class="text-decoration-none text-light">Home</Link></li>
+            <li><Link to="/about" class="text-decoration-none text-light">About</Link></li>
+            <li><Link to="/ensurance" class="text-decoration-none text-light">All Insurance</Link></li>
+            <li><Link to="/aboutData" class="text-decoration-none text-light">Data</Link></li>
           </ul>
         </div>
 
         <div class="col-md-4 mb-3">
           <h5>Contact</h5>
           <p class="small mb-1">📍 Mumbai, India</p>
-          <p class="small mb-1">📞 +91 98765 43210</p>
-          <p class="small">✉️ info@insurance.com</p>
+          {/* <p class="small mb-1">📞 +91 98765 43210</p> */}
+          <p class="small">✉️ bfsiopendata@gmail.com</p>
         </div>
       </div>
 

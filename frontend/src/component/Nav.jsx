@@ -58,28 +58,28 @@ function Nav() {
                   About
                 </Link>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link
                   to="/services"
                   className={`nav-link ${location.pathname === '/services' ? 'active-link' : ''}`}
                 >
                   Services
                 </Link>
-              </li>
-              <li className="nav-item">
+              </li> */}
+              {/* <li className="nav-item">
                 <Link
                   to="/contact"
                   className={`nav-link ${location.pathname === '/contact' ? 'active-link' : ''}`}
                 >
                   Contact Us
                 </Link>
-              </li>
+              </li> */}
               <li className="nav-item">
                 <Link
                   to="/aboutData"
                   className={`nav-link ${location.pathname === '/aboutData' ? 'active-link' : ''}`}
                 >
-                  About Data
+                  Data
                 </Link>
               </li>
             </ul>

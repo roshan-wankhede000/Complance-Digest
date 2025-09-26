@@ -11,7 +11,7 @@ import Frame from './component/Frame';
 import Admin from './component/Admin';
 import Footer from './component/Footer';
 import About from './component/About';
-import Services from './component/Services';
+// import Services from './component/Services';
 import Contact from './component/Contact';
 import Insurance from './component/Insurance';
 import AdminAboutData from './component/AdminAboutData';
@@ -35,14 +35,14 @@ function App() {
       path:"/aboutData",
       element:<><Nav></Nav><AboutData></AboutData><Footer></Footer></>
     },
-    {
-      path:"/services",
-      element:<><Nav></Nav><Services></Services><Footer></Footer></>
-    },
-    {
-      path:"/contact",
-      element:<><Nav></Nav><Contact></Contact><Footer></Footer></>
-    },
+    // {
+    //   path:"/services",
+    //   element:<><Nav></Nav><Services></Services><Footer></Footer></>
+    // },
+    // {
+    //   path:"/contact",
+    //   element:<><Nav></Nav><Contact></Contact><Footer></Footer></>
+    // },
     {
       path:"/ensurance",
       element:<><Nav></Nav><Insurance></Insurance><Footer></Footer></>

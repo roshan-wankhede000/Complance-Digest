@@ -2,9 +2,8 @@ import React from 'react'
 
 function Frame() {
   return (
-    <div className="container py-5">
-      <h2 className="text-center mb-4">Google Looker Studio Reports </h2>
-
+    <div className="container py-5 border">
+      
       {/* Responsive Iframe using Bootstrap ratio */}
       <div className="ratio ratio-16x9">
         <iframe

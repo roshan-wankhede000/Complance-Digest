@@ -9,18 +9,12 @@ function Home() {
       Insurance & Financial Services Expert | Strategist | Advocate for the Underserved
     </p>
 
-    <div class="my-4">
-      <a href="#" class="btn btn-primary btn-lg">
-        Explore General Insurance Dashboard →
-      </a>
-    </div>
-
     <p class="fw-semibold text-secondary">
       Insurance | Financial data | News | Analysis | Storytelling using Data
     </p>
 
     <div class="mt-5">
-      <h3 class="fw-bold">General Insurance Dashboard</h3>
+      <h3 class="fw-bold">GENERAL INSURANCE BUSINESS DASHBOARD</h3>
       <p class="text-secondary">
         This dashboard presents an insurer-wise snapshot of gross premium numbers 
         across Motor, Health, and Personal Accident lines. Filter and explore by Year or Insurer.
