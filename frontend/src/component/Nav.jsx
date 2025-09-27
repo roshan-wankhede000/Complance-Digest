@@ -42,14 +42,14 @@ function Nav() {
                   Home
                 </Link>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link
                   to="/ensurance"
                   className={`nav-link ${location.pathname === '/ensurance' ? 'active-link' : ''}`}
                 >
                   All Insurance
                 </Link>
-              </li>
+              </li> */}
               <li className="nav-item">
                 <Link
                   to="/about"

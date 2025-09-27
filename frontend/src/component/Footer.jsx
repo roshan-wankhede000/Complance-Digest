@@ -7,7 +7,6 @@ function Footer() {
         <footer class="bg-dark text-light mt-auto py-4">
     <div class="container">
       <div class="row">
-        
         <div class="col-md-4 mb-3">
           <h5>About Us</h5>
           <p class="small">
@@ -20,7 +19,7 @@ function Footer() {
           <ul class="list-unstyled">
             <li><Link to="/" class="text-decoration-none text-light">Home</Link></li>
             <li><Link to="/about" class="text-decoration-none text-light">About</Link></li>
-            <li><Link to="/ensurance" class="text-decoration-none text-light">All Insurance</Link></li>
+            {/* <li><Link to="/ensurance" class="text-decoration-none text-light">All Insurance</Link></li> */}
             <li><Link to="/aboutData" class="text-decoration-none text-light">Data</Link></li>
           </ul>
         </div>

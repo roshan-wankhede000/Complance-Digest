@@ -43,10 +43,10 @@ function App() {
     //   path:"/contact",
     //   element:<><Nav></Nav><Contact></Contact><Footer></Footer></>
     // },
-    {
-      path:"/ensurance",
-      element:<><Nav></Nav><Insurance></Insurance><Footer></Footer></>
-    },
+    // {
+    //   path:"/ensurance",
+    //   element:<><Nav></Nav><Insurance></Insurance><Footer></Footer></>
+    // },
     {
       path:"/admin",
       element:<><Nav></Nav><Admin></Admin><Footer></Footer></>
