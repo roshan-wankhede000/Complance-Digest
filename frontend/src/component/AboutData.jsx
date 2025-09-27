@@ -68,10 +68,10 @@ function AboutData() {
                                                 {/* <a href={`${url}/download/${item.csvfile}`} className="btn btn-outline-primary" title="Download File">
                                                     <i className="bi bi-filetype-xlsx"></i> Download
                                                 </a> */}
-                                                <a href={`https://onedrive.live.com/view.aspx?resid=391EE544D02DDEC8!s41642eb8ea3d4ecbab7f204db8415e26&cid=391ee544d02ddec8&redeem=aHR0cHM6Ly8xZHJ2Lm1zL2YvYy8zOTFlZTU0NGQwMmRkZWM4L0VsOG52VFJXZUU5UGhPcGlpTHNibFNvQnZiY1o1R254aUJ0Y1d4Wi1ITnhacFE_ZT16aE1hazU&migratedtospo=true&app=Excel&CT=1758887202877&OR=ItemsView`} className="btn btn-outline-primary" title="Download File" target='_blank'>
+                                                <a href={`${item.csvfilelink}`} className="btn btn-outline-primary" title="Download File" target='_blank'>
                                                     <i className="bi bi-filetype-xlsx"></i> Download
                                                 </a> 
-
+                                                
                                             </div>
                                             <hr />
                                         </div>
